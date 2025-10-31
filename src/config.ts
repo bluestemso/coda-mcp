@@ -3,5 +3,5 @@ type Config = {
 };
 
 export const config: Config = {
-  apiKey: process.env.API_KEY!,
+  apiKey: process.env.CODA_API_KEY!,
 };

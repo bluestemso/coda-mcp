@@ -28,7 +28,7 @@ Add the MCP server to Cursor/Claude Desktop/etc. like so:
       "command": "npx",
       "args": ["-y", "coda-mcp@latest"],
       "env": {
-        "API_KEY": "..."
+        "CODA_API_KEY": "..."
       }
     }
   }
@@ -37,7 +37,7 @@ Add the MCP server to Cursor/Claude Desktop/etc. like so:
 
 Required environment variables:
 
-- `API_KEY`: Your Coda API key. You can generate one from your Coda account settings.
+- `CODA_API_KEY`: Your Coda API key. You can generate one from your Coda account settings.
 
 This MCP server is also available with Docker, like so:
 
@@ -46,9 +46,9 @@ This MCP server is also available with Docker, like so:
   "mcpServers": {
     "coda": {
       "command": "docker",
-      "args": ["run", "-i", "--rm", "-e", "API_KEY", "reaperberri/coda-mcp:latest"],
+      "args": ["run", "-i", "--rm", "-e", "CODA_API_KEY", "reaperberri/coda-mcp:latest"],
       "env": {
-        "API_KEY": "..."
+        "CODA_API_KEY": "..."
       }
     }
   }
@@ -84,3 +84,9 @@ This MCP server is also available with Docker, like so:
 ## Running the Server
 
 The MCP server communicates over standard input/output (stdio). To run it, set the environment variables and run the compiled JavaScript file - `dist/index.js`.
+
+## Open WebUI Setup
+
+For detailed instructions on setting up this MCP server with Open WebUI:
+- **Local Setup:** See [OPENWEBUI_SETUP.md](./OPENWEBUI_SETUP.md)
+- **VPS Setup with MCP Proxy:** See [VPS_SETUP.md](./VPS_SETUP.md)
